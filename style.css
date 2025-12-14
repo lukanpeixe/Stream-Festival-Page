@@ -1,0 +1,625 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    /*outline: solid rgba(255, 0, 0, 0.5) 1px;*/
+}
+
+:root {
+    --color-back-1:  #222;
+    --color-back-2:  #090909;
+    --color-base-1:  #42b;
+    --color-base-2:  #448;
+    --color-high-1:  #4b8;
+    --color-high-2:  #488;
+    --color-text-1:  #eee;
+    --color-text-2:  #bbb;
+    --color-text-3:  #ddd;
+    --color-tier-2a: #fc0 ;
+    --color-tier-2b: #ff9 ;
+    --color-blu: #58E;
+    --color-blu-ex: #8EE;
+    --color-lim: #0D5;
+    --color-lim-ex: #ad5;
+    --color-red: #B01;
+    --color-red-ex: #d81;
+    --color-pin: #F8E;
+    --color-pin-ex: #FB8;
+     
+}
+
+body {
+    background-color: var(--color-back-1);
+    color: var(--color-text-1);
+    width: clamp(200px,100%,1440px);
+    
+    
+    
+
+}
+
+#event-title {
+    
+}
+
+#event-title > h1 {
+    text-align: center;
+    margin: 1rem 1rem 0 1rem;
+    background-color: var(--color-base-1);    
+    border-radius: 1rem 1rem 0rem 0rem ;
+    letter-spacing: 0.35rem;
+    font-weight: 100;
+    border: solid 2px var(--color-text-2);
+}
+
+#event-title > p {
+    text-align: center;
+    margin: 0.5rem 1rem 1rem 1rem;
+    background-color: var(--color-base-2);    
+    border: solid 2px var(--color-text-1);
+    border-radius: 0rem 0rem 1rem 1rem ;
+    padding: 0.5rem;
+    text-shadow: 0px 2px 2px black;
+
+}
+
+#donate {
+    margin: 1rem;
+    background-color: var(--color-text-3);
+    border-radius: 1rem;
+}
+
+#donate > h2 {
+    padding: 0.5rem;
+    text-align: center;
+    color: var(--color-back-1);
+    font-family: cursive;
+
+
+}
+
+#donate-panel {
+    box-shadow: 0 -20px 10px 2px ;
+    margin: 5px;
+    border-radius: 1rem;
+}
+
+.four-panel {
+    display: grid;    
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: clamp(5px,2vw,40px);
+    padding: clamp(5px,2vw,40px);
+    
+}
+
+@media screen and (min-width: 600px) {
+
+    .four-panel {        
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: clamp(5px,2vw,40px);
+    padding: clamp(5px,2vw,40px);
+    }
+
+} 
+
+@media screen and (min-width: 1000px) {
+
+    .four-panel {        
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr ;
+    gap: clamp(5px,1vw,40px);
+    padding: clamp(5px,1vw,40px);
+    }
+
+} 
+
+.donate-card {
+    position: relative;
+    background-color: var(--color-back-1);
+    padding: 8px;
+    border: solid 3px var(--color-text-2);
+    /*width: 30rem;    */
+    border-radius: 3rem 0 0 0;    
+    box-shadow: 2px 2px 5px #00000077;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+.donate-card > * {
+    
+    padding: 1rem;
+    
+}
+
+.donate-card p {
+    border-top: solid 1px #88888888;
+    color: var(--color-text-2);    
+}
+
+.donate-card em {
+    
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #ddbb1144;
+
+    user-select: all;
+    -webkit-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
+    cursor: copy;
+
+    
+}
+
+.donate-card h3 {    
+    text-align: right;
+    border-radius: 3rem 0 0 0;
+    letter-spacing: 0.2rem;
+    transform: scaleY(1.2) skewX(-20deg);
+}
+
+.donate-card p {
+    line-height: 1.7rem;
+    
+
+}
+
+.donate-card h3 a {    
+    color: var(--color-blu);
+}
+
+#dp1 h3 {
+    color: var(--color-red-ex);    
+}
+
+#dp2 h3 {
+    color: var(--color-high-1);
+}
+
+#dp3 h3 {
+    color: var(--color-red);
+}
+
+#dp4 h3 {
+    color: var(--color-lim-ex);
+}
+
+
+
+
+
+#info {
+    background-color: var(--color-base-2);
+    padding: 1rem;
+    margin: 1rem;
+}
+
+#info h2 {
+    text-align: center;
+    padding-bottom: 1rem;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+}
+
+#info h3 {
+    text-align: center;
+    margin-top: 1rem;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    background-color: var(--color-text-1);
+    color: var(--color-back-2);
+}
+
+#ip-1 h3{
+    color: var(--color-blu);
+}
+
+#ip-2 h3 {
+    color: var(--color-lim);
+}
+
+#ip-3 h3 {
+    color: var(--color-red);
+}
+
+#ip-4 h3 {
+    color: var(--color-pin);
+}
+
+#info-head {
+    background-color: var(--color-text-1);
+    color: var(--color-back-2);
+    padding: 0.5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+#info-head p {
+    margin: 0.175rem ;
+    padding: 0.5rem;
+    border: solid 2px var(--color-text-2);
+}
+
+#info-panel {
+    margin-top: 1rem;
+    border: solid 2px #ffffff22;
+}
+
+#info-panel p {
+    text-align: center;
+    margin: 1rem;    
+    
+}
+
+.tag-box {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;    
+    justify-content: center;
+    align-content: center;
+
+   
+
+    
+}
+
+
+.tag {
+    
+    display: inline-block;    
+    border-radius: 10px 0px 10px 10px;
+    
+
+    margin: 0.2rem;
+    padding: 0.4rem 1rem 0.4rem 1rem;
+    
+    
+
+    /* * Seleção por clique */
+    user-select: all;
+    -webkit-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
+    cursor: copy;    
+    
+    background-color: var(--color-back-2);
+    position: relative;
+
+}
+
+.tag-text {
+    
+    position: relative; 
+    z-index: 2;        
+    display: inline;
+}
+
+
+/* * Fallback */
+#ip-1 .tag-text {
+    color: var(--color-blu-ex);
+}
+
+#ip-2 .tag-text {
+    color: var(--color-lim-ex);
+}
+
+#ip-3 .tag-text {
+    color: var(--color-red-ex);
+}
+
+#ip-4 .tag-text {
+    color: var(--color-pin-ex);
+}
+
+@supports (background-clip: text)  { /* !! Não funciona no Fox */
+
+    #ip-1 .tag-text, #cat-blu .tag-text {
+        background: repeating-linear-gradient(in hsl 45deg,
+        var(--color-blu) 10%,
+        var(--color-blu-ex) 20%,
+        var(--color-blu) 30%        
+        );               
+        background-attachment: fixed;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+
+        background-size: 100% 100%;
+        transition: background-size 1s;
+    }
+
+    #ip-2 .tag-text, #cat-lim .tag-text {
+        background: repeating-linear-gradient(in hsl 45deg,
+        var(--color-lim) 10%,
+        var(--color-lim-ex) 20%,
+        var(--color-lim) 30%        
+        );              
+        background-attachment: fixed;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+
+        background-size: 100% 100%;
+        transition: background-size 1s;
+    }
+    
+    #ip-3 .tag-text, #cat-red .tag-text {
+        background: repeating-linear-gradient(in hsl 45deg,
+        var(--color-red) 10%,
+        var(--color-red-ex) 20%,
+        var(--color-red) 30%        
+        );              
+        background-attachment: fixed;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+
+        background-size: 100% 100%;
+        transition: background-size 1s;
+    }
+    
+    #ip-4 .tag-text, #cat-pin .tag-text {
+        background: repeating-linear-gradient(in hsl 45deg,
+        var(--color-pin) 10%,
+        var(--color-pin-ex) 20%,
+        var(--color-pin) 30%        
+        );              
+        background-attachment: fixed;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+
+        background-size: 100% 100%;
+        transition: background-size 1s;
+    }    
+
+    #ip-1 .tag:hover .tag-text  {
+    background-size: 100% 50%;
+    }
+
+    #ip-2 .tag:hover .tag-text  {
+    background-size: 100% 50%;
+    }
+
+    #ip-3 .tag:hover .tag-text  {
+    background-size: 100% 50%;
+    }
+
+    #ip-4 .tag:hover .tag-text  {
+    background-size: 100% 50%;
+    }
+}
+
+
+
+
+
+#categories {
+    margin: 1rem;
+    padding: 0.5rem;
+    background-color: var(--color-high-1)
+    
+}
+
+.category-container{
+    margin: 0.5rem;    
+    background-color: var(--color-back-1);
+
+    padding: 1rem;
+    border: solid 2px #ffffff55;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr;
+    gap: 0.5rem;
+    
+    justify-items: center;
+}
+
+.game-card {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    align-self: end;
+    border: solid 2px #55555555;
+}
+
+#categories a {
+    display: block;
+    
+    width: 100%;
+    
+    aspect-ratio: 2/1;
+    overflow: hidden;
+}
+
+#categories img {
+    width: 100%;
+    
+    object-fit: cover;
+}
+
+.t1-games, .t2-games {
+    background-color: var(--color-back-2);
+    padding: 0 0 1.5rem 0;
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.tier-title {
+    position: relative;
+    align-items: center;
+    text-align: center;
+    
+    padding: 5px;
+    transform: skewX(15deg);
+    letter-spacing: 0.5rem;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    
+    margin: 30px 30% 0px 30%;
+}
+
+
+
+.tier-title::after {
+    content: "X";
+    display: block;
+    width: auto;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+    color: var(--color-text-3);
+    transform: skewX(-15deg) translateY(-80px) scaleY(0.8);
+    pointer-events: none;
+    text-shadow: none;
+}
+
+.t1-games .tier-title {   
+    
+   
+    color: var(--color-text-1);
+
+    text-shadow:    
+    2px 0px 0px black,
+    0px 2px 0px black,
+    2px 2px 0px black,
+    -2px 0px 0px black,
+    0px -2px 0px black,
+    -2px -2px 0px black,
+    -2px 2px 0px black,
+    2px -2px 0px black,
+    0 0 15px var(--color-text-3),
+    0 0 10px var(--color-text-3),
+    0 0 5px var(--color-text-3);
+
+    box-shadow: -1px 10px 6px -6px var(--color-text-3);
+
+}
+
+.t2-games .tier-title {   
+    
+   
+    color: var(--color-tier-2a);
+
+    text-shadow:    
+    2px 0px 0px black,
+    0px 2px 0px black,
+    2px 2px 0px black,
+    -2px 0px 0px black,
+    0px -2px 0px black,
+    -2px -2px 0px black,
+    -2px 2px 0px black,
+    2px -2px 0px black,
+    0 0 15px var(--color-tier-2b),
+    0 0 10px var(--color-tier-2b),
+    0 0 5px var(--color-tier-2a);
+
+    box-shadow: -1px 10px 6px -6px var(--color-tier-2a);
+
+}
+
+
+
+.category-container summary {   
+    
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem;
+    margin: 1% 20% 0% 20%;
+    border: solid 2px var(--color-text-2);
+    border-radius: 1rem;
+    transform: translateY(0.5rem);
+    user-select: none;
+    
+
+    background-color: var(--color-back-1);
+}
+
+.category-container summary:active {
+ transform: translateY(10px);
+ box-shadow: inset 0 2px 1px 4px var(--color-base-2);
+}
+
+summary:active ~ .tier-title::after {
+transform: skewX(-15deg) translateY(-78px) scaleY(0.8);
+}
+
+details.t1-games[open] summary,
+details.t2-games[open] summary {
+    color: transparent;
+    background-color: var(--color-back-1);
+    border: solid 2px var(--color-text-2);    
+}
+
+.game-card p {
+
+    text-align: center;
+    letter-spacing: 0.3rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin: 0.2rem;
+
+}
+
+#categories .tier-obs {
+    
+    
+    position: relative;
+    align-self: center;
+    background-color: var(--color-text-3);
+    color: var(--color-back-2);
+    line-height: 1.5rem;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif; /* ?? não aplica */
+
+
+    margin: 1rem;
+    padding: 1rem;
+    border: solid 3px var(--color-base-2);
+    border-radius: 6px;
+    width: clamp(10vw,80%,500px);
+
+}
+
+#tier{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+#tier-table
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    padding: 10px;
+    width: 400px;
+
+    p {
+        border-bottom: solid 2px white;
+        padding: 6px 0 4px 0;
+    }
+
+    .t2 {
+        position: relative;
+        color: var(--color-tier-2a);
+    }
+
+    .t2::after {
+        content: "";        
+        width: 150%;
+        height: 120%;
+        transform: translateY(-100%) translateX(-100%);
+        display: block;
+        background-color: var(--color-high-1);
+        z-index: -1;
+        mix-blend-mode: color-burn;
+    }
+}
