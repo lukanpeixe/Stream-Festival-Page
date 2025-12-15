@@ -7,15 +7,25 @@
     <title>Festival Batatal</title>
 </head>
 <body>
+<main>
     <div id="event-title">
         <h1>1º FESTIVAL BATATAL</h1>
         <p>Evento especial de fim de ano! Adicione pontos na sua categoria favorita,
     vote com a comunidade, escolha qual jogo o Lukan irá jogar!</p>
     </div>
     
-    <div id="donate">
-        <h2 id="donate-title">Faça sua colaboração</h2>
-        <div id="donate-panel" class="four-panel">
+    
+
+    <details id="donate" class="module" open>
+        <summary id="donate-title" class="module-head">
+            <h2>Faça sua colaboração</h2>
+            <div class="icon">
+                <span class="i-border"></span>
+                <span class="i-fill"></span>
+                <a href="#donate"></a>
+            </div>
+        </summary>
+        <div id="donate-panel" class="four-panel quad-fix">
             <div class="donate-card" id="dp1">
                 <h3>Ofereça suas batatas!</h3>
                 <p class="dp-sub-tittle">A cada batata, adicione 12 pontos</p>
@@ -41,10 +51,18 @@
                 <p>Se tornar membro ou mensagem de membro do mês de garante uma batata e 20 gelos ou 100 gelos (Tier 1 ou 2)</p>
             </div>
         </div>
-    </div>
+    </details>     
 
-    <div id="info">
-        <h2>Palavras Chave</h2>
+
+
+    <details id="info" class="module" open>
+        <summary class="module-head">
+            <h2>Palavras Chave</h2>
+            <div class="icon">
+                <span class="i-border"></span>
+                <span class="i-fill"></span>
+            </div>
+        </summary>
         <div id="info-head"> 
             <p>1 - Escolha uma categoria</p>
             <p>2 - Copie ou Escolha uma tag</p>
@@ -116,9 +134,25 @@
                 </div>
             </div>
         </div>
-    </div>
+        <span class="air"></span>
+    </details>
 
-    <div id="categories">        
+
+
+
+        
+
+
+    <details id="categories" class="module">
+
+        <summary id="categories-title" class="module-head">
+            <h2>Os jogos das lives Especiais</h2>
+            <div class="icon">
+                <span class="i-border"></span>
+                <span class="i-fill"></span>
+            </div>
+        </summary>
+
         <div class="category-container" id="cat-blu">
             <p class="pre-tittle">jogos da categoria</p>
             <h2 class="category-title tag-text">Baú dos Clássicos</h2>
@@ -367,7 +401,10 @@
                 <p>Obs: Votações de "2 ou 3 Horas" dessa categoria representa que a live do jogo mais votado durará 2 ou 3 horas. Aplicável à ambos os tiers. Lives de Tier 2 desta categoria ficarão para às madrugadas e podem ser privadas após o seu término.</p>
             </div>
         </div>
-    </div>
+
+    </details>
+
+
 
     <div id="tier">
         <h2>Level x Pontos</h2>
@@ -394,6 +431,8 @@
             <p class="lv">Lv 20</p><p class="pts">18000 pts</p><p class="t2">Tier2 (3 horas)</p>
         </div>
     </div>
+
+
 
     <!--
     <div id="stream-info">
@@ -435,5 +474,6 @@
     
 
     -->
+</main>        
 </body>
 </html>
