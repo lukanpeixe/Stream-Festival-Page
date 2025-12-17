@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    
+    
     <title>Festival Batatal</title>
+
+
+
 </head>
 <body>
 <main>
@@ -14,9 +23,76 @@
     vote com a comunidade, escolha qual jogo o Lukan irá jogar!</p>
     </div>
     
-    
+    <details id="help" class="module" open> 
+        <summary id="help-title" class="module-head">
+            <h2>Como Funciona?</h2>
+            <div class="icon">
+                <span class="i-border"></span>
+                <span class="i-fill"></span>
+                <a href="#donate"></a>
+            </div>
+        </summary>
 
-    <details id="donate" class="module" open>
+        
+        <details class="flux-panel" id="flux-1" open>
+            <summary><h3>Fluxo dos Pontos</h3><div class="help-icon"><div class="help-i-int"></div></div></summary>
+            
+
+        <div class="flux-grid">
+
+            <div class="flux-item" id="I01"><span>1</span><p>Escolha um Clã e uma palavra chave</p></div>
+            <div class="flux-pointer" id="P01"></div> 
+            <div class="flux-item" id="I02"><span>2</span><p>Converta Batata/Donate em Pontos para o seu Clã</p></div>
+            <div class="flux-pointer" id="P02"></div>
+            <div class="flux-item" id="I03"><span>3</span><p>Se o Clã subir de nível, desbloqueie lives especiais</p></div>
+
+        </div>
+        </details>
+
+        <details class="flux-panel" id="flux-2">
+            <summary><h3>Level Up!</h3><div class="help-icon"><div class="help-i-int"></div></div></summary>
+
+        <div class="flux-grid">
+
+            <div class="flux-item" id="I01"><span>1</span><p>Quando um Clã sobe de nível uma live especial entra em votação</p></div>
+            <div class="flux-pointer" id="P01"></div> 
+            <div class="flux-item" id="I02"><span>2</span><p>As opções de live especial variam de acordo com o clã e o tier do nível alcançado</p></div>
+            <div class="flux-pointer" id="P02"></div>
+            <div class="flux-item" id="I03"><span>3</span><p>Todos na live participam da votação, independente do clã</p></div>
+            <div class="flux-pointer" id="P03"></div>
+            <div class="flux-item" id="I04"><span>4</span><p>Seguidores com mais "% de dominância" tem votos mais poderosos</p></div>
+            <div class="flux-pointer" id="P04"></div>
+            <div class="flux-item" id="I05"><span>5</span><p>A Opção mais votada terá live agendada para final de semana ou feriado</p></div>
+
+
+        </div>
+        </details>
+
+        <details class="flux-panel" id="flux-3">
+            <summary><h3>Rankings</h3><div class="help-icon"><div class="help-i-int"></div></div></summary>
+
+        <div class="flux-grid">
+
+            <div class="flux-item" id="I01"><span>1</span><p>Existem dois Rankings independentes</p></div>
+            <div class="flux-pointer" id="P01"></div> 
+            <div class="flux-item" id="I02"><span>2</span><p>Ranking dos batateiros, para aqueles que coletam mais batatas</p></div>
+            <div class="flux-pointer" id="P02"></div>
+            <div class="flux-item" id="I03"><span>3</span><p>Ranking dos Donators, para aqueles que somaram mais pontos para os clãs</p></div>
+            <div class="flux-pointer" id="P03"></div>
+            <div class="flux-pointer" id="P04"></div>
+            <div class="flux-item" id="I04"><span>4</span><p>O TOP 8 de cada ranking é exibido em tela</p></div>
+            <div class="flux-pointer" id="P05"></div>
+            <div class="flux-item" id="I05"><span>5</span><p>O TOP 3 de cada ranking ganhará recompensas especiais no final do evento</p></div>
+
+
+        </div>
+        </details>
+
+        <span class="air"></span>
+    </details>
+
+
+    <details id="donate" class="module"> <!-- ?? optional: "open" in details -->
         <summary id="donate-title" class="module-head">
             <h2>Faça sua colaboração</h2>
             <div class="icon">
@@ -51,11 +127,12 @@
                 <p>Se tornar membro ou mensagem de membro do mês de garante uma batata e 20 gelos ou 100 gelos (Tier 1 ou 2)</p>
             </div>
         </div>
+        
     </details>     
 
 
 
-    <details id="info" class="module" open>
+    <details id="info" class="module">
         <summary class="module-head">
             <h2>Palavras Chave</h2>
             <div class="icon">
@@ -401,6 +478,8 @@
                 <p>Obs: Votações de "2 ou 3 Horas" dessa categoria representa que a live do jogo mais votado durará 2 ou 3 horas. Aplicável à ambos os tiers. Lives de Tier 2 desta categoria ficarão para às madrugadas e podem ser privadas após o seu término.</p>
             </div>
         </div>
+
+        <span class="air"></span>
 
     </details>
 

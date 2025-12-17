@@ -15,6 +15,7 @@
     --color-text-1:  #eee;
     --color-text-2:  #bbb;
     --color-text-3:  #ddd;
+    --color-text-4: #eaeaea;
     --color-tier-2a: #fc0 ;
     --color-tier-2b: #ff9 ;
     --color-blu: #58E;
@@ -204,6 +205,12 @@ main {
 } 
 
 
+    
+
+
+
+
+
 
 
 
@@ -228,6 +235,258 @@ main {
     text-shadow: 0px 2px 2px black;
 
 }
+
+
+#help {
+    margin: 1rem;
+    background-color: var(--color-text-1);
+    color: var(--color-back-2);
+}
+
+#help .module-head {
+    background-color: var(--color-text-1);
+}
+
+.flux-panel {
+    margin: 1rem 0.5rem 2rem 0.5rem;
+    border: solid 2px var(--color-text-3);
+}
+
+.flux-panel  summary {
+    display: inline-block;    
+    transform: translateX(25%) translateY(-60%);
+    background-color: var(--color-text-1);
+    
+    padding: 0 1rem 0 1rem ;
+    border: solid 2px var(--color-text-3);
+    
+    top: 5rem;
+    position: sticky;
+    z-index: 9;
+
+    cursor: pointer;
+
+    width: 140px;
+}
+
+.flux-panel .help-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    transform: translateX(-250%) translateY(-100%);
+    background-color: var(--color-text-1);
+    border: solid 1px var(--color-text-2);
+    
+}
+
+.flux-panel .help-i-int {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    
+    background-color: var(--color-high-1);    
+    transform: translateX(50%) translateY(50%) rotate(45deg);
+    
+    clip-path: polygon(
+        20% 0%, 0% 20%,
+        30% 50%, 0% 80%,
+        20% 100%, 50% 70%,
+        80% 100%, 100% 80%,
+        70% 50%, 100% 20%,
+        80% 0%, 50% 30%);
+    
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.flux-panel[open] .help-i-int {
+    background-color: var(--color-red);    
+    transform: translateX(50%) translateY(50%) rotate(0deg);
+}
+
+
+.flux-grid div {
+    margin: 0.5rem;
+}
+
+
+
+#flux-1 .flux-grid,
+#flux-2 .flux-grid,
+#flux-3 .flux-grid {
+    display: grid;    
+
+    align-items: center;
+    justify-items: center;
+}
+
+#flux-3 #P04 {
+        display: none;
+    }
+
+@media screen and (min-width: 800px) {
+
+    #flux-1 .flux-grid {
+        display: grid;
+        grid-template-columns: 4fr 1fr 4fr 1fr 4fr;        
+        grid-template-areas:
+        " I01 P01 I02 P02 I03 ";
+        margin: 1rem;
+        align-items: center;
+        justify-items: center;
+    }
+
+    #flux-2 .flux-grid {
+        grid-template-columns: 4fr 1fr 4fr 1fr 4fr;
+        
+        grid-template-areas:
+        " I01 P01 I02 P02 I03 "
+        " . . . .         P03"
+        "  .  .   I05 P04 I04 ";
+        margin: 1rem;
+        align-items: center;
+        justify-items: center;
+    }
+
+    #flux-3 .flux-grid {
+        grid-template-columns: 2fr 2fr 1fr 2fr 2fr;
+        
+        grid-template-areas:
+        " . I01 I01 I01 . "
+        " . P01 . P02 . "        
+        "  I02 I02 . I03 I03"
+        " . P03 . P04 . "
+        ". I04 I04 I04 . "
+        "  . . P05 . ."
+        "  . I05 I05 I05 . ";
+        margin: 1rem clamp(1rem,30vw,7rem) 1rem clamp(1rem,30vw,7rem) ;
+        align-items: center;
+        justify-items: center;
+    }
+
+    #flux-1 .flux-item,
+    #flux-2 .flux-item {
+        grid-template-columns: 1fr;
+        align-self: start;        
+        
+    }
+    
+    #flux-1 #P01, #flux-1 #P02, #flux-1 #P03
+     {        
+        transform: rotate(-90deg);
+        z-index: 5;        
+    }
+    
+    #flux-2 #P01, #flux-2 #P02, #flux-2 #P03
+     {        
+        transform: rotate(-90deg);
+        z-index: 5;        
+    }
+
+    #flux-3 #P04 {
+        display: block;
+    }
+
+    #flux-2 #P03 {transform: rotate(0deg);}
+    #flux-2 #P04 {transform: rotate(90deg);}
+
+    #help .flux-item p {text-align: center;}
+    
+    #help #I01 {grid-area: I01;}
+    #help #I02 {grid-area: I02;}
+    #help #I03 {grid-area: I03;}
+    #help #I04 {grid-area: I04;}
+    #help #I05 {grid-area: I05;}
+
+    #help #P01 {grid-area: P01;}
+    #help #P02 {grid-area: P02;}
+    #help #P03 {grid-area: P03;}
+    #help #P04 {grid-area: P04;}
+    #help #P05 {grid-area: P05;}
+
+}
+
+.flux-pointer {
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    background-image: linear-gradient(45deg, #00000000 40%, var(--color-high-2) 40.01% , var(--color-high-1) 48% 59.99% , #00000000 60%);
+    border-right: Solid 8px var(--color-high-1) ;
+    border-bottom: Solid 8px var(--color-high-2) ;    
+    border-radius: 5px 10px 5px 10px ;
+    rotate: 45deg;
+    box-shadow: inset -4px -4px 0 1px var(--color-high-1);
+    
+}
+
+#flux-2 .flux-pointer {    
+    background-image: linear-gradient(45deg, #00000000 40%, var(--color-base-2) 40.01% , var(--color-base-1) 48% 59.99% , #00000000 60%);
+    border-right: Solid 8px var(--color-base-1) ;
+    border-bottom: Solid 8px var(--color-base-2) ;        
+    box-shadow: inset -4px -4px 0 1px var(--color-base-1);        
+    opacity: 80%;
+}
+
+#flux-2 .flux-item span {
+    background-color: var(--color-base-1);
+    color: var(--color-text-3);
+    opacity: 80%;
+}
+
+#flux-3 .flux-pointer {    
+    background-image: linear-gradient(45deg, #00000000 40%, var(--color-red-ex) 40.01% , var(--color-red) 48% 59.99% , #00000000 60%);
+    border-right: Solid 8px var(--color-red) ;
+    border-bottom: Solid 8px var(--color-red-ex) ;        
+    box-shadow: inset -4px -4px 0 1px var(--color-red);        
+    opacity: 80%;
+}
+
+#flux-3 .flux-item span {
+    background-color: var(--color-red);
+    color: var(--color-text-3);
+    opacity: 80%;
+}
+
+.flux-item {
+    width: 80%;
+    padding: 1rem;
+    background-color: var(--color-text-1);
+    border: solid 5px var(--color-text-3);   
+    border-radius: 20px ;
+    box-shadow: inset 0px -5px 10px 5px var(--color-text-4);
+  
+    
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 5fr;
+    align-items: center;
+
+}
+
+.flux-item span {
+    background-color: var(--color-high-1);
+    color: var(--color-text-3);
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+
+    font-weight: bolder;    
+    border-radius: 1.2rem;
+
+    
+    width: auto;
+}
+
+.flux-item p {
+    font-family: "Comfortaa", sans-serif;
+    letter-spacing: 0.03rem;
+    line-height: 1.5rem;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+
+
+
 
 #donate {
     margin: 1rem;
@@ -400,7 +659,7 @@ main {
     
 }
 
-#info .air {
+.air {
     display: block;
     height: 0.1rem;
 }
