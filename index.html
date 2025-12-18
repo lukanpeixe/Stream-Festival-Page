@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     
-    
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <title>Festival Batatal</title>
 
 
@@ -40,11 +41,11 @@
 
         <div class="flux-grid">
 
-            <div class="flux-item" id="I01"><span>1</span><p>Escolha um Clã e uma palavra chave</p></div>
+            <div class="flux-item" id="I01"><span>1<i data-lucide="key-round"></i></span><p>Escolha um Clã e uma palavra chave</p></div>
             <div class="flux-pointer" id="P01"></div> 
-            <div class="flux-item" id="I02"><span>2</span><p>Converta Batata/Donate em Pontos para o seu Clã</p></div>
+            <div class="flux-item" id="I02"><span>2<i data-lucide="arrow-down-up"></i></span><p>Converta Batata/Donate em Pontos para o seu Clã</p></div>
             <div class="flux-pointer" id="P02"></div>
-            <div class="flux-item" id="I03"><span>3</span><p>Se o Clã subir de nível, desbloqueie lives especiais</p></div>
+            <div class="flux-item" id="I03"><span>3<i data-lucide="monitor-play"></i></span><p>Se o Clã subir de nível, desbloqueie lives especiais</p></div>
 
         </div>
         </details>
@@ -54,15 +55,15 @@
 
         <div class="flux-grid">
 
-            <div class="flux-item" id="I01"><span>1</span><p>Quando um Clã sobe de nível uma live especial entra em votação</p></div>
+            <div class="flux-item" id="I01"><span>1<i data-lucide="vote"></i></span><p>Quando um Clã sobe de nível uma live especial entra em votação</p></div>
             <div class="flux-pointer" id="P01"></div> 
-            <div class="flux-item" id="I02"><span>2</span><p>As opções de live especial variam de acordo com o clã e o tier do nível alcançado</p></div>
+            <div class="flux-item" id="I02"><span>2<i data-lucide="swords"></i></span><p>As opções de live especial variam de acordo com o clã e o tier do nível alcançado</p></div>
             <div class="flux-pointer" id="P02"></div>
-            <div class="flux-item" id="I03"><span>3</span><p>Todos na live participam da votação, independente do clã</p></div>
+            <div class="flux-item" id="I03"><span>3<i data-lucide="users"></i></span><p>Todos na live participam da votação, independente do clã</p></div>
             <div class="flux-pointer" id="P03"></div>
-            <div class="flux-item" id="I04"><span>4</span><p>Seguidores com mais "% de dominância" tem votos mais poderosos</p></div>
+            <div class="flux-item" id="I04"><span>4<i data-lucide="crown"></i></span><p>Seguidores com mais "% de dominância" tem votos mais poderosos</p></div>
             <div class="flux-pointer" id="P04"></div>
-            <div class="flux-item" id="I05"><span>5</span><p>A Opção mais votada terá live agendada para final de semana ou feriado</p></div>
+            <div class="flux-item" id="I05"><span>5<i data-lucide="star"></i></span><p>A Opção mais votada terá live agendada para final de semana ou feriado</p></div>
 
 
         </div>
@@ -73,16 +74,16 @@
 
         <div class="flux-grid">
 
-            <div class="flux-item" id="I01"><span>1</span><p>Existem dois Rankings independentes</p></div>
+            <div class="flux-item" id="I01"><span>1<i data-lucide="columns-2"></i></span><p>Existem dois Rankings independentes</p></div>
             <div class="flux-pointer" id="P01"></div> 
-            <div class="flux-item" id="I02"><span>2</span><p>Ranking dos batateiros, para aqueles que coletam mais batatas</p></div>
+            <div class="flux-item" id="I02"><span>2<i data-lucide="torus"></i></span><p>Ranking dos batateiros, para aqueles que coletam mais batatas</p></div>
             <div class="flux-pointer" id="P02"></div>
-            <div class="flux-item" id="I03"><span>3</span><p>Ranking dos Donators, para aqueles que somaram mais pontos para os clãs</p></div>
+            <div class="flux-item" id="I03"><span>3<i data-lucide="hand-coins"></i></span><p>Ranking dos Donators, para aqueles que somaram mais pontos para os clãs</p></div>
             <div class="flux-pointer" id="P03"></div>
             <div class="flux-pointer" id="P04"></div>
-            <div class="flux-item" id="I04"><span>4</span><p>O TOP 8 de cada ranking é exibido em tela</p></div>
+            <div class="flux-item" id="I04"><span>4<i data-lucide="award"></i></span><p>O TOP 8 de cada ranking é exibido em tela</p></div>
             <div class="flux-pointer" id="P05"></div>
-            <div class="flux-item" id="I05"><span>5</span><p>O TOP 3 de cada ranking ganhará recompensas especiais no final do evento</p></div>
+            <div class="flux-item" id="I05"><span>5<i data-lucide="trophy"></i></span><p>O TOP 3 de cada ranking ganhará recompensas especiais no final do evento</p></div>
 
 
         </div>
@@ -511,7 +512,11 @@
         </div>
     </div>
 
+    
 
+    <script>
+    lucide.createIcons();
+    </script>
 
     <!--
     <div id="stream-info">

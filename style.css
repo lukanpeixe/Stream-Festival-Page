@@ -323,6 +323,8 @@ main {
         display: none;
     }
 
+/* ## Media Queries */     
+
 @media screen and (min-width: 800px) {
 
     #flux-1 .flux-grid {
@@ -338,15 +340,27 @@ main {
     #flux-2 .flux-grid {
         grid-template-columns: 4fr 1fr 4fr 1fr 4fr;
         
+        
+        grid-template-areas:
+        " I01 P01 I02 . . "
+        " . P02 . .  .       "
+        "  I03 P03 I04   P04 I05 ";
+        
+        
+        
+        /*
         grid-template-areas:
         " I01 P01 I02 P02 I03 "
         " . . . .         P03"
         "  .  .   I05 P04 I04 ";
+        */
+
         margin: 1rem;
         align-items: center;
         justify-items: center;
     }
 
+    /*
     #flux-3 .flux-grid {
         grid-template-columns: 2fr 2fr 1fr 2fr 2fr;
         
@@ -361,36 +375,44 @@ main {
         margin: 1rem clamp(1rem,30vw,7rem) 1rem clamp(1rem,30vw,7rem) ;
         align-items: center;
         justify-items: center;
+    }*/
+
+    #flux-3 .flux-grid {
+        grid-template-columns: 4fr 1fr 4fr 1fr 4fr;
+        
+        
+        grid-template-areas:
+        " I01 P01 I02 . . "
+        " P02 . P03 .  .       "
+        " I03 P04 I04   P05 I05 ";       
+        
+        
+
+        margin: 1rem;
+        align-items: center;
+        justify-items: center;
     }
 
     #flux-1 .flux-item,
-    #flux-2 .flux-item {
+    #flux-2 .flux-item,
+    #flux-3 .flux-item {
         grid-template-columns: 1fr;
-        align-self: start;        
-        
+        align-self: start;       
     }
     
-    #flux-1 #P01, #flux-1 #P02, #flux-1 #P03
-     {        
-        transform: rotate(-90deg);
-        z-index: 5;        
-    }
-    
-    #flux-2 #P01, #flux-2 #P02, #flux-2 #P03
-     {        
+    #flux-1 #P01, #flux-1 #P02, #flux-1 #P03,
+    #flux-2 #P01, #flux-2 #P03, #flux-2 #P04,
+    #flux-3 #P01, #flux-3 #P04, #flux-3 #P05
+    {        
         transform: rotate(-90deg);
         z-index: 5;        
     }
 
-    #flux-3 #P04 {
-        display: block;
-    }
-
-    #flux-2 #P03 {transform: rotate(0deg);}
-    #flux-2 #P04 {transform: rotate(90deg);}
-
+    #flux-2 #P02 {transform: rotate(45deg);}
+    #flux-3 #P04 {display: block;}
     #help .flux-item p {text-align: center;}
-    
+   
+
     #help #I01 {grid-area: I01;}
     #help #I02 {grid-area: I02;}
     #help #I03 {grid-area: I03;}
@@ -404,6 +426,22 @@ main {
     #help #P05 {grid-area: P05;}
 
 }
+
+
+@media screen and (min-width: 1200px) {
+    #flux-1 .flux-item,
+    #flux-2 .flux-item,
+    #flux-3 .flux-item {
+        grid-template-columns: 1fr 4fr;
+        align-self: center;       
+    }
+    #help .flux-item span {height: 8rem;}
+    .flux-panel {
+        padding: 0 clamp(20px,5vw,200px);
+    }
+}
+
+/* ## Media Queries */
 
 .flux-pointer {
     box-sizing: border-box;
@@ -474,6 +512,8 @@ main {
 
     
     width: auto;
+
+    overflow: hidden;
 }
 
 .flux-item p {
@@ -484,9 +524,20 @@ main {
     text-align: left;
 }
 
+.flux-item [data-lucide] {
+    
+    background-color: var(--color-text-3);
+    margin: 15px 10px 0px 10px;
+    padding: 3px;
+    border-radius: 5px;
+    transform: scale(1.4); 
+    
+    
+}
 
-
-
+#flux-1 [data-lucide] {color: var(--color-high-1);}
+#flux-2 [data-lucide] {color: var(--color-base-1);}
+#flux-3 [data-lucide] {color: var(--color-red);}
 
 #donate {
     margin: 1rem;
