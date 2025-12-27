@@ -16,8 +16,8 @@
     --color-text-2:  #bbb;
     --color-text-3:  #ddd;
     --color-text-4: #eaeaea;
-    --color-tier-2a: #fc0 ;
-    --color-tier-2b: #ff9 ;
+    --color-tier-2a: #d396ff ;
+    --color-tier-2b: #d4bce4 ;
     --color-blu: #58E;
     --color-blu-ex: #8EE;
     --color-lim: #0D5;
@@ -34,11 +34,19 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+    margin: 0;
+
     background-color: var(--color-back-1);
     color: var(--color-text-1);
 }
 
 main {
+    flex: 1;
+    
     background-color: var(--color-back-1);
     color: var(--color-text-1);
     width: clamp(200px,100%,1440px);
@@ -49,10 +57,10 @@ main {
 
 .module-head {
     position: sticky;
-    top: 1.8rem;
+    top: 1.6rem;
     z-index: 10;
 
-    box-shadow: inset 0 5px 12px -3px #11006677;
+    box-shadow: inset 0 5px 12px -3px #00000022;
 
 }
 
@@ -68,7 +76,7 @@ main {
 }
 
 .module-head:hover .icon {
-    filter: saturate(2) hue-rotate(20deg);
+    filter: saturate(2) hue-rotate(20deg) contrast(1.8);
 }
 
 .module-head:hover h2 {
@@ -143,7 +151,7 @@ main {
 }
 
 
-.four-panel {
+.four-panel, .quad-fix {
     display: grid;    
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -194,20 +202,29 @@ main {
     gap: clamp(5px,1vw,40px);
     padding: clamp(5px,1vw,40px);
     }
-
-    .four-panel.quad-fix{        
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: clamp(5px,5vw,30px);
-    padding: clamp(5px,1vw,40px) clamp(20px,15vw,300px);    
-    }
-
 } 
 
+@media screen and (min-width: 800px) {
 
+.quad-fix{        
     
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr ;
+    gap: clamp(5px,4vw,80px);
+    
+    }
+}  
 
+@media screen and (min-width: 1400px) {
 
+.quad-fix{        
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr  ;
+    gap: 10px;
+    
+    }
+}
 
 
 
@@ -231,7 +248,7 @@ main {
     font-size: 0.8rem;   
     background-color: var(--color-back-1);      
     font-weight: 100;
-    border-bottom: solid 2px var(--color-text-2);
+    
 }
 
 #sticky-wall {
@@ -239,37 +256,103 @@ main {
     width: clamp(calc(200px - 2rem),calc(100% - 2rem),calc(1440px - 2rem)); /* same as main - default section margin*/
     margin: 0rem 1rem 0rem 1rem;
 
-    height: 7rem;
+    height: 6rem;
     transform: translateY(-15%);
 
     background-image: linear-gradient(var(--color-back-1) 90%, transparent);
     z-index: 19;
 }
 
-#event-title > h1 {
-    position: relative;
-    
 
+
+.main-title-container
+
+{
+    z-index: 20;
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: solid 2px var(--color-text-2);
+    background-color: var(--color-back-2);
+    
     text-align: center;
     padding: 0.4rem;
+    margin: 0rem 1rem 0 1rem;
+}
+
+.four-logo {
+box-sizing: border-box;
+    
+    margin: 0 1rem 0 1rem;
+    width: 0.7rem;
+    height: 0.5rem;
+    background-color: black;
+
+    border-radius: 40% 0 ;
+
+    box-shadow: -8px  8px 0 2px var(--color-lim),
+                 8px  -8px 0 2px var(--color-pin),
+                
+                -8px -6px 0 2px var(--color-blu),                 
+                 8px  6px 0 2px var(--color-red);
+                
+
+    
+    transform: scaleX(100%) translateX(-24%) scale(60%) rotate(15deg) ;
+
+}
+
+.new-logo {
+    box-sizing: border-box;
+    
+    margin: 0 1rem 0 1rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: transparent;
+
+    border-radius: 50% 0 50% 50% ;
+
+    box-shadow: 4px -4px 0 -2px white,
+                
+                -4px -8px 0 -2px var(--color-blu),                 
+                 8px  4px 0 -2px var(--color-pin-ex),
+                -6px  -6px 0 0px var(--color-lim-ex),
+                 6px   6px 0 0px var(--color-red);
+
+    
+    transform: translateY(20%) scaleX(100%) rotate(315deg) ;
+    
+
+}
+
+
+
+
+#event-title h1 {
+    position: relative;
+    
     font-size: 1.2rem;
-    margin: 1rem 1rem 0 1rem;
-    background-color: var(--color-base-1);    
-    border-radius: 1rem 1rem 0rem 0rem ;
+  
+    
     letter-spacing: 0.35rem;
     font-weight: 100;
-    border: solid 2px var(--color-text-2);
     z-index: 20;
 }
 
 #event-title > p {
+    
+    font-family: "Comfortaa", sans-serif;
     position: relative;
     text-align: center;
+    background-color: var(--color-back-1);
+
+    margin: 0rem 1rem 1rem 1rem;
+        
     
-    margin: 0.5rem 1rem 1rem 1rem;
-    background-color: var(--color-base-2);    
-    border: solid 2px var(--color-text-1);
-    border-radius: 0rem 0rem 1rem 1rem ;
+    
     padding: 0.5rem;
     text-shadow: 0px 2px 2px black;
     z-index: 20;
@@ -352,7 +435,7 @@ main {
 }
 
 
-
+#flux-0 .flux-grid,
 #flux-1 .flux-grid,
 #flux-2 .flux-grid,
 #flux-3 .flux-grid {
@@ -528,6 +611,10 @@ main {
     opacity: 80%;
 }
 
+
+
+
+
 .flux-item {
     width: 80%;
     padding: 1rem;
@@ -535,13 +622,13 @@ main {
     border: solid 5px var(--color-text-3);   
     border-radius: 20px ;
     box-shadow: inset 0px -5px 10px 5px var(--color-text-4);
-  
+    
     
     display: grid;
     position: relative;
     grid-template-columns: 1fr 5fr;
     align-items: center;
-
+    
 }
 
 .flux-item span {
@@ -550,7 +637,7 @@ main {
     font-size: 3rem;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
-
+    
     font-weight: bolder;    
     border-radius: 1.2rem;
     
@@ -560,13 +647,32 @@ main {
     overflow: hidden;
 }
 
-.flux-item p {
+.flux-item p, .flux-solo p {
     font-family: "Comfortaa", sans-serif;
     letter-spacing: 0.03rem;
     line-height: 1.5rem;
     padding: 0.5rem;
     text-align: left;
+    text-wrap: pretty;
+    
 }
+
+.flux-solo p {
+    
+    text-indent: 0.4rem;
+    hyphens: auto;
+
+}
+
+.flux-solo strong,
+.flux-item strong {
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 800;
+    background-color: var(--color-text-3);    
+    padding: 0.2rem 0.2rem;
+    border-radius: 5px;
+}
+
 
 .flux-item [data-lucide] {
     
@@ -583,54 +689,114 @@ main {
 #flux-2 [data-lucide] {color: var(--color-base-1);}
 #flux-3 [data-lucide] {color: var(--color-red);}
 
-#donate {
-    margin: 1rem;
-    background-color: var(--color-text-3);
+
+.flux-solo {
     
+    width: 80%;    
+    padding: 0.5rem;
+    margin: 2rem;
+    background-color: var(--color-text-1);
+    border: solid 5px var(--color-text-3);   
+    border-radius: 20px ;
+    box-shadow: inset 0px -5px 10px 5px var(--color-text-4);
 }
 
-#donate .module-head {
-    background-color: var(--color-text-3);    
+.flux-solo > p {
+    text-align: justify;
+}
+
+
+
+#donate {margin: 1rem;}
+
+#donate .module-head {background-color: var(--color-back-2);    
 }
 
 #donate h2 {      
     text-align: center;
-    color: var(--color-back-1);
+    color: var(--color-text-1);
     
     
     
 }
 
 #donate-panel {
-    box-shadow: 0 -20px 10px 2px ;
-    margin: 5px;
-    border-radius: 1rem;
+    background-color: var(--color-back-2);   
 }
 
 
 .donate-card {
+    
+    
     position: relative;
     background-color: var(--color-back-1);
-    padding: 8px;
-    border: solid 3px var(--color-text-2);
-    /*width: 30rem;    */
-    border-radius: 3rem 0 0 0;    
-    box-shadow: 2px 2px 5px #00000077;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     
+    
+    padding: 1rem 0 0 0;
+    
+    box-shadow: 2px 2px 5px #00000077;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    
+    justify-items: center;
 }
 
-.donate-card > * {
-    
+.donate-card h3 {    
+    text-align: center;    
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+    background-color: black;
+    border-radius: 5px;
+    align-self: center;
+    border-top: solid 0.2rem transparent;
     padding: 1rem;
     
+    
 }
 
-.donate-card p {
-    border-top: solid 1px #88888888;
-    color: var(--color-text-4);    
+.donate-card h3 > a {    
+    color: var(--color-text-2);
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 2px dotted var(--color-high-1);
+    font-size: 1.8rem;
+    letter-spacing: 0.4rem;
+}
+
+.dp-sub-title {
+    font-size: 1.3rem;
+    text-wrap: balance;
+    align-self: center;
+    
+}
+
+.dp-info-1 {
+    grid-area: 2 / 1 / 3 / 3 ;
+    align-self: center;
+    background-color: black;
+    text-wrap: pretty;
+}
+
+.dp-info-2 {
+    grid-area: 3 / 1 / 4 / 3 ;
+    align-self: top;
+    border-left: solid 0.2rem black;
+    text-wrap: pretty;
+}
+
+
+
+.donate-card > * {
+    font-family: "Comfortaa", sans-serif;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    box-sizing: border-box;
+}
+
+.extra-spacing {
+    letter-spacing: 0.5rem;
 }
 
 .donate-card em {
@@ -647,37 +813,47 @@ main {
     
 }
 
-.donate-card h3 {    
-    text-align: right;
-    border-radius: 3rem 0 0 0;
-    letter-spacing: 0.2rem;
-    transform: scaleY(1.2) skewX(-20deg);
-}
+
 
 .donate-card p {
     line-height: 1.7rem;
-    
-
 }
 
-.donate-card h3 a {    
-    color: var(--color-blu);
+
+#dp1 {
+    h3 {
+    border-color: var(--color-red-ex);    
+    }
+    .dp-info-2 {
+        border-color: var(--color-red-ex);
+    }
 }
 
-#dp1 h3 {
-    color: var(--color-red-ex);    
+#dp2 {
+    h3 {
+    border-color: var(--color-high-1);
+    }
+    .dp-info-2 {
+        border-color: var(--color-high-1);
+    }
 }
 
-#dp2 h3 {
-    color: var(--color-high-1);
+#dp3 {
+    h3 {
+    border-color: var(--color-red);
+    }
+    .dp-info-2 {
+        border-color: var(--color-red);
+    }
 }
 
-#dp3 h3 {
-    color: var(--color-red);
-}
-
-#dp4 h3 {
-    color: var(--color-lim-ex);
+#dp4 {
+    h3 {
+    border-color: var(--color-lim-ex);
+    }
+    .dp-info-2 {
+        border-color: var(--color-lim-ex);
+    }
 }
 
 
@@ -706,7 +882,7 @@ main {
     margin-top: 1rem;
     letter-spacing: 0.25rem;
     text-transform: uppercase;
-    background-color: var(--color-text-1);
+    background-color: var(--color-back-1);
     color: var(--color-back-2);
 }
 
@@ -820,6 +996,9 @@ main {
     color: var(--color-pin-ex);
 }
 
+
+
+
 @supports (background-clip: text)  { /* !! Não funciona no Fox */
 
     #ip-1 .tag-text, #cat-blu .tag-text {
@@ -836,6 +1015,8 @@ main {
         background-size: 100% 100%;
         transition: background-size 1s;
     }
+
+
 
     #ip-2 .tag-text, #cat-lim .tag-text {
         background: repeating-linear-gradient(in hsl 45deg,
@@ -909,20 +1090,24 @@ main {
 
 #categories {
     margin: 1rem;    
-    background-color: var(--color-high-1)    
+    background-color: var(--color-high-2)    
 }
 
 #categories .module-head {    
-    background-color: var(--color-high-1)    
+    background-color: var(--color-high-2)    
 }
+
+
 
 .category-container{
     margin: 0.5rem;    
-    background-color: var(--color-back-1);
+    
 
     padding: 1rem;
-    border: solid 2px #ffffff55;
+    background-color: var(--color-back-1);
     
+
+
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 4fr;
@@ -936,26 +1121,36 @@ main {
     position: relative;
     display: flex;
     flex-flow: column nowrap;
-    align-self: end;
+    justify-content: space-around;
+
+    align-self: end;    
     border: solid 2px #55555555;
+
+    height: 100%;
 }
 
 #categories summary {
+    
+    
+    
     list-style: none;    
     cursor: pointer;
-    width: 100%;
+    
 }
 
 #categories .category-title  {    
     display: block;
     justify-content: center;
     box-sizing: border-box;
-
-    left: 50%;
-    transform: translateX(-50%);
     
 
-    width: min(500px,100%);   
+    text-transform: capitalize;
+    font-family: "Comfortaa", sans-serif;
+    left: 50%;
+    
+    
+
+    width: min(30rem,70vw);   
 
     border: 3px solid var(--color-text-2);
     border-radius: 20px;
@@ -965,37 +1160,115 @@ main {
     
 }
 
+
+
 #categories .category-title:hover  {
-    transform: translateX(-50%) translateY(-5%);  
-    }
+    transform: translateY(-5%);  
+    background-size: 150% 100%;
+
+}
+
+
+#cat-blu .tag-border {
+    border: 2px solid transparent; 
+    
+    background-image: 
+    linear-gradient(var(--color-back-2), var(--color-back-2)), 
+    repeating-linear-gradient(45deg, var(--color-blu) 20%, var(--color-blu-ex) 40%, var(--color-blu) 60%); 
+    
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-size: 100% 100%;
+    
+    border-radius: 12px; 
+    transition: background-size 1s;
+}
+
+#cat-lim .tag-border {
+    border: 2px solid transparent; 
+    
+    background-image: 
+    linear-gradient(var(--color-back-2), var(--color-back-2)), 
+    repeating-linear-gradient(45deg, var(--color-lim) 20%, var(--color-lim-ex) 40%, var(--color-lim) 60%); 
+    
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-size: 100% 100%;
+    
+    border-radius: 12px; 
+    transition: background-size 1s;
+}
+
+#cat-red .tag-border {
+    border: 2px solid transparent; 
+    
+    background-image: 
+    linear-gradient(var(--color-back-2), var(--color-back-2)), 
+    repeating-linear-gradient(45deg, var(--color-red) 20%, var(--color-red-ex) 40%, var(--color-red) 60%); 
+    
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-size: 100% 100%;
+    
+    border-radius: 12px; 
+    transition: background-size 1s;
+}
+
+#cat-pin .tag-border {
+    border: 2px solid transparent; 
+    
+    background-image: 
+    linear-gradient(var(--color-back-2), var(--color-back-2)), 
+    repeating-linear-gradient(45deg, var(--color-pin) 20%, var(--color-pin-ex) 40%, var(--color-pin) 60%); 
+    
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    background-size: 100% 100%;
+    
+    border-radius: 12px; 
+    transition: background-size 1s;
+}
+
+
 
 
 #categories img {
     width: 100%;
     
     object-fit: cover;
+    
 }
 
 .t1-games, .t2-games {
-    background-color: var(--color-back-2);
+    
     padding: 0 0 1.5rem 0;
+    border: 2px solid #444444ff;
     border-radius: 1rem;
-    width: 100%;
+    width: 100%;    
 }
 
+.t1-games {border: 2px solid var(--color-text-2);margin-bottom: 1rem;}
+.t2-games {border: 2px solid var(--color-tier-2b);}
+
 .tier-title {
+    font-family: "Comfortaa", sans-serif;
+    
     position: relative;
     align-items: center;
     text-align: center;
     
+    
+
     padding: 5px;
     
     letter-spacing: 0.5rem;
     font-size: 1.25rem;
-    text-transform: uppercase;
+    font-weight: 100;
     
     margin: 5px 5% 0px 5%;
 }
+
+
 
 
 .t1-games .tier-title {   
@@ -1003,24 +1276,6 @@ main {
    
     color: var(--color-text-1);
 
-    text-shadow:    
-    2px 0px 0px black,
-    0px 2px 0px black,
-    2px 2px 0px black,
-    -2px 0px 0px black,
-    0px -2px 0px black,
-    -2px -2px 0px black,
-    -2px 2px 0px black,
-    2px -2px 0px black,
-    
-    3px 0px 0px var(--color-text-4),
-    0px 3px 0px var(--color-text-4),
-    3px 3px 0px var(--color-text-4),
-    -3px 0px 0px var(--color-text-4),
-    0px -3px 0px var(--color-text-4),
-    -3px -3px 0px var(--color-text-4),
-    -3px 3px 0px var(--color-text-4),
-    3px -3px 0px var(--color-text-4)
     
     ;
 
@@ -1029,47 +1284,30 @@ main {
 }
 
 .t2-games .tier-title {   
-    
-   
+
     color: var(--color-tier-2a);
 
-    text-shadow:    
-    2px 0px 0px black,
-    0px 2px 0px black,
-    2px 2px 0px black,
-    -2px 0px 0px black,
-    0px -2px 0px black,
-    -2px -2px 0px black,
-    -2px 2px 0px black,
-    2px -2px 0px black,
-    
-    3px 0px 0px var(--color-tier-2b),
-    0px 3px 0px var(--color-tier-2b),
-    3px 3px 0px var(--color-tier-2b),
-    -3px 0px 0px var(--color-tier-2b),
-    0px -3px 0px var(--color-tier-2b),
-    -3px -3px 0px var(--color-tier-2b),
-    -3px 3px 0px var(--color-tier-2b),
-    3px -3px 0px var(--color-tier-2b)
-
-    ;
 }
+
+
+
+
 
 .tier-line {
 
     margin: auto;
     height: 1px;
     width: 80%;    
-    border: dotted 5px var(--color-back-2);   
+    border: dotted 2px var(--color-back-1);   
     transform: skewX(60deg);
 }
 
 .t1-games .tier-line{
-    background-image: linear-gradient(90deg , var(--color-back-2) 20% ,var(--color-text-4),var(--color-back-2) 80%);
+    background-image: linear-gradient(90deg , var(--color-back-1) 20% ,var(--color-text-4),var(--color-back-1) 80%);
 }
 
 .t2-games .tier-line{
-    background-image: linear-gradient(90deg , var(--color-back-2) 20% ,var(--color-tier-2a),var(--color-back-2) 80%);
+    background-image: linear-gradient(90deg , var(--color-back-1) 20% ,var(--color-tier-2a),var(--color-back-1) 80%);
 }
 
 
@@ -1103,20 +1341,20 @@ details.t2-games[open] summary {
 
     position: relative;
     align-self: center;
-    background-color: var(--color-text-1);
-    color: var(--color-back-2);
+    
+    color: var(--color-text-2);
     line-height: 1.7rem;
 
 
     text-align: justify;
-    text-shadow: 0px 0px 5px #fff;
+    
 
 
     margin: 1rem auto 1rem auto;
     padding: 1rem;
-    border: solid 3px var(--color-text-2);
-    border-radius: 6px;
-    width: clamp(10vw,80%,500px);
+    border-top: solid 2px var(--color-text-2);
+    
+    width: clamp(50vw,80%,500px);
 
 }
 
@@ -1193,11 +1431,12 @@ details.t2-games[open] summary {
     
     box-sizing: border-box;
     
-    border: solid 4px var(--color-text-2);
+    border: solid 2px #444;
     background-color: var(--color-back-2);
+    margin: 0 0.5rem;
 
     background-image:
-    radial-gradient( var(--color-back-2) 50%, #000000AA),
+    radial-gradient( var(--color-back-2) 80%, #000000AA),
     radial-gradient(var(--color-base-2));
     
     padding: 1rem;    
@@ -1208,25 +1447,25 @@ details.t2-games[open] summary {
 .extra-info-element > p, .extra-info-element li {
     font-family: "Comfortaa", sans-serif;
     line-height: 2.4rem;
-    border-top: dotted 2px var(--color-base-2);
+    border-top: solid 2px #444;
     margin: 0.5rem;
     text-indent: 0.5rem;
-    color: var(--color-back-2);
-    background-image: linear-gradient(90deg,var(--color-text-4) 88% 98%, var(--color-text-2) 98.5%);
+    color: var(--color-text-4);
+    
     padding: 0.5rem;
     opacity: 95%;
-
-    border-radius: 4px 0 0 4px;
+    list-style: none;
+    
 }
 
 #extra-info .extra-info-element h4 {
     font-family: "Comfortaa", sans-serif;
-    line-height: 2.4rem;
-    border-top: dotted 2px var(--color-base-1);
+    font-size: 1.2rem;
+    line-height: 2.4rem;    
     margin: 0.5rem;
-    text-indent: 0.5rem;
-    color: var(--color-text-1);
-    background-image: linear-gradient(90deg,var(--color-back-1) 88% 98%, var(--color-back-2) 98.5%);
+    text-wrap: balance;
+    color: var(--color-back-2);
+    background-color: var(--color-text-1);
     padding: 0.5rem;
     opacity: 95%;
 }
@@ -1234,12 +1473,12 @@ details.t2-games[open] summary {
 #extra-info .extra-info-element strong {
     font-family: "Comfortaa", sans-serif;
     line-height: 2.4rem;
-    border-bottom: dotted 2px var(--color-text-2);
+    
     
     text-indent: 0.5rem;
     background-color: var(--color-base-2);
     color: var(--color-text-1);
-    padding: 0.4rem 0 0 0 ;
+    padding: 0.4rem 0.2rem 0 0.2rem ;
     opacity: 95%;
 }
 
@@ -1251,6 +1490,7 @@ details.t2-games[open] summary {
 }
 
 #tier-table {
+    
     display: grid;
     grid-template-columns: 1fr;
     width: 90%;
@@ -1260,12 +1500,16 @@ details.t2-games[open] summary {
 
 .table-line
 {
+    
     display: grid;
     grid-template-columns: 3fr 4fr 5fr;
     p {
+        font-family: 'Courier New', Courier, monospace;
         text-align: center;
-        border-bottom: solid 2px white;
-        padding: 6px 0.2rem 4px 0.2rem;
+        border-bottom: solid 2px var(--color-high-2);
+        padding: 6px 0.2rem 4px 1.2rem;
+        text-align: left;
+        
     }
 }
 
@@ -1494,12 +1738,19 @@ details.t2-games[open] summary {
 */
 
 footer {
-    display: block;
-    border-top: 3px solid var(--color-high-2);
-    background-image:   linear-gradient(var(--color-base-2) 0% ,var(--color-back-2) 100%),
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    
+
+    border-top: 3px solid #00000088;
+    background-image:   linear-gradient(var(--color-base-2) -20% ,var(--color-back-2) 100%),
                         repeating-linear-gradient(45deg, rgb(0, 0, 0) 1rem, rgb(80, 80, 80) 2rem),
                         repeating-linear-gradient(-45deg, rgb(90, 90, 90) 1rem, rgb(15, 15, 15) 2rem);
     background-blend-mode: hard-light,hard-light,normal;
+
+    
     height: 12rem;
     transition: filter 2s ease-in-out;
 }
@@ -1510,10 +1761,15 @@ footer:hover {
 
 footer > p {
     
+    width: 70%;
     font-family: "comfortaa" ;
+    font-size: 0.7rem;
+
     color: var(--color-text-2);
     margin: 1rem;
     text-align: center;
+    background-color: #00000044;
+
 }
 
 
@@ -1534,4 +1790,14 @@ footer > p {
     * h2, h3, h4 {
         font-size: 1rem;        
     }
+
+    #donate .donate-card > p,
+    #donate .donate-card > h3,
+    #donate .donate-card h3 > a,
+    #extra-info .extra-info-element
+    {
+        font-size: 0.8rem;
+    }
+
+
 }

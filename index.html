@@ -19,15 +19,15 @@
 <body>
 <main>
     <div id="sticky-frame">
-        <div id="sticky-title">O GUIA DO FESTIVAL DO DESTINO</div>
+        <div id="sticky-title">GUIA DO FESTIVAL DO DESTINO</div>
+        
     </div>
 
     
     <div id="event-title">
         <div id="sticky-wall"></div>
-        <h1>O GUIA DO FESTIVAL DO DESTINO</h1>
-        <p>Evento especial para lives do PK2P e PNAV - Adicione passos no seu caminho favorito,
-    vote com a comunidade, escolha o destino das próximas lives!</p>        
+        <div class="main-title-container"><div class="four-logo"></div><h1>FESTIVAL DO DESTINO</h1><div class="four-logo"></div></div>
+        <p>Folheto de Informações do Evento de Livestreams</p>        
     </div>
     
 
@@ -42,35 +42,85 @@
         </summary>
 
         
-        <details class="flux-panel" id="flux-1" open>
-            <summary><h3>Fluxo dos Pontos</h3><div class="help-icon"><div class="help-i-int"></div></div></summary>
+        
+
+        <details class="flux-panel" id="flux-0" open>
+            <summary><h3>O que é?</h3><div class="help-icon"><div class="help-i-int"></div></div></summary>
             
 
         <div class="flux-grid">
 
-            <div class="flux-item" id="I01"><span>1 <i data-lucide="key-round"></i></span><p>Escolha um Caminho e uma palavra chave</p></div>
+            <div class="flux-solo">
+                <p>Uma temporada de livestreams especiais nos canais do Youtube do <strong>Lukan.</strong></p>
+                <p>São 4 temas diferentes, aqui chamados de <strong>caminhos</strong>, que o público poderá escolher!</p>
+                <p>Seguidores adicionam <strong>passos</strong> em diferentes caminhos e assim a comunidade define o destino das transmissões!</p>
+            </div>          
+
+        </div>
+        </details>
+
+
+
+
+        <details class="flux-panel" id="flux-1" open>
+            <summary><h3>Escolha um caminho</h3><div class="help-icon"><div class="help-i-int"></div></div></summary>
+            
+
+        <div class="flux-grid">
+
+            
+            <div class="flux-item" id="I01">
+                <span>1 <i data-lucide="key-round"></i></span><p>Escolha um <strong>Caminho</strong> através de uma palavra chave</p>
+            </div>
+            
             <div class="flux-pointer" id="P01"></div> 
-            <div class="flux-item" id="I02"><span>2 <i data-lucide="arrow-down-up"></i></span><p>Converta Batata ou Donates em Passos e Avance o Caminho escolhido</p></div>
+            
+            <div class="flux-item" id="I02">
+                <span>2 <i data-lucide="arrow-down-up"></i></span><p>Converta o "Item Batata" ou Doações em <strong>Passos</strong> e avance o Caminho escolhido</p>
+            </div>
+            
             <div class="flux-pointer" id="P02"></div>
-            <div class="flux-item" id="I03"><span>3 <i data-lucide="monitor-play"></i></span><p>Se o Caminho superar uma etapa, uma live especial é liberada</p></div>
+            
+            <div class="flux-item" id="I03">
+                <span>3 <i data-lucide="monitor-play"></i></span><p>Quando um Caminho superara uma <strong>Etapa</strong>, uma live especial é liberada</p>
+            </div>
 
         </div>
         </details>
 
         <details class="flux-panel" id="flux-2">
-            <summary><h3>Level Up!</h3><div class="help-icon"><div class="help-i-int"></div></div></summary>
+            <summary><h3>Etapa Superada!</h3><div class="help-icon"><div class="help-i-int"></div></div></summary>
 
         <div class="flux-grid">
 
-            <div class="flux-item" id="I01"><span>1 <i data-lucide="vote"></i></span><p>Quando um Caminho ultrapassa uma etapa, uma live especial entra em votação</p></div>
+            
+            <div class="flux-item" id="I01">
+                <span>1 <i data-lucide="vote"></i></span><p>Quando a Etapa de um Caminho é superada, uma <strong>live especial</strong> entra em votação</p>
+            </div>
+            
             <div class="flux-pointer" id="P01"></div> 
-            <div class="flux-item" id="I02"><span>2 <i data-lucide="swords"></i></span><p>As opções de live especial variam de acordo com o caminho e o tier da etapa vencida</p></div>
+            
+            <div class="flux-item" id="I02">
+                <span>2 <i data-lucide="swords"></i></span><p>As opções de live especial variam de acordo com o caminho e o <strong>tipo</strong> da etapa superada</p>
+            </div>
+            
             <div class="flux-pointer" id="P02"></div>
-            <div class="flux-item" id="I03"><span>3 <i data-lucide="users"></i></span><p>Todos na live participam da votação, independente do caminho que pertencem</p></div>
+            
+            <div class="flux-item" id="I03">
+                <span>3 <i data-lucide="users"></i></span><p>Todos na livestream participam da votação, independente do caminho que pertencem</p>
+            </div>
+            
             <div class="flux-pointer" id="P03"></div>
-            <div class="flux-item" id="I04"><span>4 <i data-lucide="crown"></i></span><p>Seguidores com mais "% de jornada" tem votos mais poderosos</p></div>
+            
+            <div class="flux-item" id="I04">
+                <span>4 <i data-lucide="crown"></i></span><p>Seguidores com mais <strong>% de jornada</strong> tem votos mais poderosos</p>
+            </div>
+            
             <div class="flux-pointer" id="P04"></div>
-            <div class="flux-item" id="I05"><span>5 <i data-lucide="star"></i></span><p>A Opção mais votada terá live agendada para final de semana ou feriado</p></div>
+            
+            <div class="flux-item" id="I05">
+                <span>5 <i data-lucide="star"></i></span><p>A Opção mais votada terá live agendada para final de semana ou feriado</p>
+            </div>
 
 
         </div>
@@ -81,16 +131,36 @@
 
         <div class="flux-grid">
 
-            <div class="flux-item" id="I01"><span>1 <i data-lucide="columns-2"></i></span><p>Existem dois Rankings independentes</p></div>
+            
+            <div class="flux-item" id="I01">
+                <span>1 <i data-lucide="columns-2"></i></span><p>Existem <strong>dois</strong> Rankings independentes</p>
+            </div>
+            
             <div class="flux-pointer" id="P01"></div> 
-            <div class="flux-item" id="I02"><span>2 <i data-lucide="torus"></i></span><p>Ranking dos batateiros, para aqueles que coletam mais batatas</p></div>
+            
+            <div class="flux-item" id="I02">
+                <span>2 <i data-lucide="torus"></i></span><p>Aqueles que coletam mais vezes o <strong>item batata</strong> vão para o "Ranking dos Batateiros"</p>
+            </div>
+            
             <div class="flux-pointer" id="P02"></div>
-            <div class="flux-item" id="I03"><span>2 <i data-lucide="hand-coins"></i></span><p>Ranking dos Viajantes, para aqueles que somaram mais passos</p></div>
+            
+            <div class="flux-item" id="I03">
+                <span>2 <i data-lucide="hand-coins"></i></span><p>Aqueles que somaram mais passos, geram mais <strong>% de jornada</strong> e vão para o "Ranking dos Viajantes"</p>
+            </div>
+            
             <div class="flux-pointer" id="P03"></div>
+            
             <div class="flux-pointer" id="P04"></div>
-            <div class="flux-item" id="I04"><span>3 <i data-lucide="award"></i></span><p>O TOP 8 de cada ranking é exibido em tela</p></div>
+            
+            <div class="flux-item" id="I04">
+                <span>3 <i data-lucide="award"></i></span><p>O <strong>TOP 8</strong> de cada ranking tem o nome periodicamente exibido na tela da livestream</p>
+            </div>
+            
             <div class="flux-pointer" id="P05"></div>
-            <div class="flux-item" id="I05"><span>4 <i data-lucide="trophy"></i></span><p>O TOP 3 de cada ranking ganhará recompensas especiais no final do evento</p></div>
+            
+            <div class="flux-item" id="I05">
+                <span>4 <i data-lucide="trophy"></i></span><p>O <strong>TOP 3</strong> de cada ranking ganhará recompensas especiais no final do evento</p>
+            </div>
 
 
         </div>
@@ -102,37 +172,37 @@
 
     <details id="donate" class="module">
         <summary id="donate-title" class="module-head">
-            <h2>Faça sua colaboração</h2>
+            <h2>Adquira Passos</h2>
             <div class="icon">
                 <span class="i-border"></span>
                 <span class="i-fill"></span>
                 <a href="#donate"></a>
             </div>
         </summary>
-        <div id="donate-panel" class="four-panel quad-fix">
+        <div id="donate-panel" class="quad-fix">
             <div class="donate-card" id="dp1">
-                <h3>Batatas</h3>
-                <p class="dp-sub-tittle">1 batata = 12 passos</p>
-                <p>Use "<em>!batataPela</em> + palavra chave" ou "<em>!batataPor</em> + palavra chave"</p>
-                <p>Batatas são dropadas durante a live, seja rápido e pegue a sua!</p>
+                <h3>Item Batata</h3>
+                <p class="dp-sub-title">&nbsp;A cada batata +12&nbsp;passos</p>
+                <p class="dp-info-1">Use "<em>!batataPela</em> + palavra chave" ou "<em>!batataPor</em> + palavra chave"</p>
+                <p class="dp-info-2">Batatas são dropadas durante a live, seja rápido e pegue a sua!</p>
             </div>
             <div class="donate-card" id="dp2">
-                <h3><a href="http://pix.peixe.site" target="blank">PIX</a> ou <a href="https://streamlabs.com/presskeytoplay/tip" target="blank">PAYPAL</a></h3>
-                <p class="dp-sub-title">A Cada R$ 1,00 adicione 9.5 passos</p>
-                <p>Adicione uma das palavras chave no corpo da sua mensagem</p>
-                <p>Será considerada a primeira palavra chave. Em falta de palavra-chave, o donate caí no "caminho das antigas"</p>
+                <h3><a href="http://pix.peixe.site" target="blank">Pix</a> ou <a href="https://streamlabs.com/presskeytoplay/tip" target="blank">Paypal</a></h3>
+                <p class="dp-sub-title">A Cada R$&nbsp;1,00 +9,5&nbsp;passos</p>
+                <p class="dp-info-1">Adicione uma das palavras chave no corpo da sua mensagem</p>
+                <p class="dp-info-2">Será considerada a primeira palavra chave. Em falta de palavra-chave, o donate caí no "caminho das antigas"</p>
             </div>
             <div class="donate-card" id="dp3">
                 <h3>Super Chat</h3>
-                <p class="dp-sub-title">A cada R$ 1,00 adicione 7 passos</p>
-                <p>Adicione uma das palavras chave no corpo da sua mensagem</p>
-                <p>Será considerada a primeira palavra chave. Em falta de palavra-chave, o donate caí no "caminho das antigas"</p>
+                <p class="dp-sub-title">A cada R$&nbsp;1,00 +7&nbsp;passos</p>
+                <p class="dp-info-1">Adicione uma das palavras chave no corpo da sua mensagem</p>
+                <p class="dp-info-2">Será considerada a primeira palavra chave. Em falta de palavra-chave, o donate caí no "caminho das antigas"</p>
             </div>
             <div class="donate-card" id="dp4">
-                <h3>Presente de Membro</h3>
-                <p class="dp-sub-title">A cada Presente de Membro, adicione 56 passos</p>
-                <p>Após o presente ser anunciado, avise a moderação ou ao Lukan para qual Caminho os passos devem ser adicionados</p>
-                <p>Se tornar membro ou mensagem de membro do mês de garante uma batata e 20 gelos ou 100 gelos (Tier 1 ou 2)</p>
+                <h3>Member Gift</h3>
+                <p class="dp-sub-title">A cada Presente +56&nbsp;passos</p>
+                <p class="dp-info-1">Após o envio, avise a moderação para qual Caminho os Passos devem ser adicionados</p>
+                <p class="dp-info-2">Se tornar membro ou mensagem de "membro do mês" te garante 20 ou 100 itens Gelo (Tier&nbsp;1 ou Tier&nbsp;2 de membro)</p>
             </div>
         </div>
         
@@ -171,7 +241,7 @@
             </div>
             <div id="ip-2">
                 <h3 class="ip-sub-title">Caminho das Interações</h3>
-                <p>Jogos com Multiplayer com chat liberado²</p>
+                <p>Jogos com Multiplayer com chat liberado</p>
                 <div class="tag-box">
                 <div class="tag"><span class="tag-text">multiplayer</span></div>
                 <div class="tag"><span class="tag-text">jogatina</span></div>
@@ -221,11 +291,14 @@
         <span class="air"></span>
     </details>
  
+    
+
+
 
     <details id="categories" class="module" open>
 
         <summary id="categories-title" class="module-head">
-            <h2>Os jogos das lives Especiais</h2>
+            <h2>Lista de Jogos</h2>
             <div class="icon">
                 <span class="i-border"></span>
                 <span class="i-fill"></span>
@@ -233,10 +306,10 @@
         </summary>
 
         <details class="category-container" id="cat-blu">            
-            <summary><h2 class="category-title tag-text">Caminho das Antigas</h2></summary>
-            <!-- * TIER 1  -->
+            <summary><h2 class="category-title tag-border">Caminho das Antigas</h2></summary>
+            <!-- * Etapa Regular  -->
             <div class="t1-games">                
-                <h4 class="tier-title">Tier 1</h4>
+                <h4 class="tier-title">Etapa Regular</h4>
                 <div class="tier-line"></div>
                 <div class="games-container four-panel">
                     <div class="game-card">
@@ -261,10 +334,10 @@
                     </div>
                 </div>
             </div>    
-            <!-- * TIER 2  -->
+            <!-- * Etapa Especial  -->
             <div class="t2-games">
                 
-                <h4 class="tier-title">Tier 2</h4>
+                <h4 class="tier-title">Etapa Especial</h4>
                 <div class="tier-line"></div>
                 <div class="games-container four-panel">
                     <div class="game-card">
@@ -296,11 +369,11 @@
         </details>
         
         <details class="category-container" id="cat-lim">
-            <summary><h2 class="category-title tag-text">Caminho das Interações</h2></summary>
-            <!-- * TIER 1  -->
+            <summary><h2 class="category-title tag-border">Caminho das Interações</h2></summary>
+            <!-- * Etapa Regular  -->
             <div class="t1-games">
                 
-                <h4 class="tier-title">Tier 1</h4>
+                <h4 class="tier-title">Etapa Regular</h4>
                 <div class="tier-line"></div>
                 <div class="games-container four-panel">
                     <div class="game-card">
@@ -325,10 +398,10 @@
                     </div>
                 </div>
             </div>    
-            <!-- * TIER 2  -->
+            <!-- * Etapa Especial  -->
             <div class="t2-games">
                 
-                <h4 class="tier-title">Tier 2</h4>
+                <h4 class="tier-title">Etapa Especial</h4>
                 <div class="tier-line"></div>
                 <div class="games-container four-panel">
                     <div class="game-card">
@@ -360,11 +433,11 @@
         </details>
 
         <details class="category-container" id="cat-red">
-            <summary><h2 class="category-title tag-text">Caminho das Dores</h2></summary>
-            <!-- * TIER 1  -->
+            <summary><h2 class="category-title tag-border">Caminho das Dores</h2></summary>
+            <!-- * Etapa Regular  -->
             <div class="t1-games">
                 
-                <h4 class="tier-title">Tier 1</h4>
+                <h4 class="tier-title">Etapa Regular</h4>
                 <div class="tier-line"></div>
                 <div class="games-container four-panel">
                     <div class="game-card">
@@ -389,10 +462,10 @@
                     </div>
                 </div>
             </div>    
-            <!-- * TIER 2  -->
+            <!-- * Etapa Especial  -->
             <div class="t2-games">
                 
-                <h4 class="tier-title">Tier 2</h4>
+                <h4 class="tier-title">Etapa Especial</h4>
                 <div class="tier-line"></div>
                 <div class="games-container four-panel">
                     <div class="game-card">
@@ -424,11 +497,11 @@
         </details>
 
         <details class="category-container" id="cat-pin">
-            <summary><h2 class="category-title tag-text">Caminho das Belezuras</h2></summary>
-            <!-- * TIER 1  -->
+            <summary><h2 class="category-title tag-border">Caminho das Belezuras</h2></summary>
+            <!-- * Etapa Regular  -->
             <div class="t1-games">
                 
-                <h4 class="tier-title">Tier 1</h4>
+                <h4 class="tier-title">Etapa Regular</h4>
                 <div class="tier-line"></div>
                 <div class="games-container four-panel">
                     <div class="game-card">
@@ -453,10 +526,10 @@
                     </div>
                 </div>
             </div>    
-            <!-- * TIER 2  -->
+            <!-- * Etapa Especial  -->
             <div class="t2-games">
                 
-                <h4 class="tier-title">Tier 2</h4>
+                <h4 class="tier-title">Etapa Especial</h4>
                 <div class="tier-line"></div>
                 <div class="games-container four-panel">
                     <div class="game-card">
@@ -483,7 +556,7 @@
             </div>
             <!-- * OBS -->
             <div class="tier-obs">
-                <p>Obs: Votações de "2 ou 3 Horas" dessa categoria representa que a live do jogo mais votado durará 2 ou 3 horas. Aplicável à ambos os tiers. Lives de Tier 2 desta categoria ficarão para às madrugadas e podem ser privadas após o seu término.</p>
+                <p>Obs: Votações de "2 ou 3 Horas" dessa categoria representa que a live do jogo mais votado durará 2 ou 3 horas. Aplicável à ambos os tiers. Lives de Etapa Especial desta categoria ficarão para às madrugadas e podem ser privadas após o seu término.</p>
             </div>
         </details>
 
@@ -507,27 +580,27 @@
             <div id="tier-panel" class="extra-info-element">
                 <h2>Passos por Etapa</h2>
                 <div id="tier-table">
-                    <div class="table-line"><p class="lv t1">Etapa</p><p class="pts t1">Passos</p><p class="t1">Qualidade </p></div>
-                    <div class="table-line"><p class="lv t1">01</p><p class="pts t1">00500</p><p class="t1">Tier1 (1 hora) </p></div>
-                    <div class="table-line"><p class="lv t1">02</p><p class="pts t1">01100</p><p class="t1">Tier1 (1 hora) </p></div>
-                    <div class="table-line"><p class="lv t1">03</p><p class="pts t1">01800</p><p class="t1">Tier1 (1 hora) </p></div>
-                    <div class="table-line t2"><p class="lv t2">04</p><p class="pts t2">03000</p><p class="t2">Tier2 (1 hora) </p></div>
-                    <div class="table-line"><p class="lv t1">05</p><p class="pts t1">03700</p><p class="t1">Tier1 (1 hora) </p></div>
-                    <div class="table-line"><p class="lv t1">06</p><p class="pts t1">04500</p><p class="t1">Tier1 (1 hora) </p></div>
-                    <div class="table-line"><p class="lv t1">07</p><p class="pts t1">05400</p><p class="t1">Tier1 (1 hora) </p></div>
-                    <div class="table-line t2"><p class="lv t2">08</p><p class="pts t2">06600</p><p class="t2">Tier2 (1 hora) </p></div>
-                    <div class="table-line"><p class="lv t1">09</p><p class="pts t1">07400</p><p class="t1">Tier1 (2 horas)</p></div>
-                    <div class="table-line"><p class="lv t1">10</p><p class="pts t1">08200</p><p class="t1">Tier1 (2 horas)</p></div>
-                    <div class="table-line"><p class="lv t1">11</p><p class="pts t1">09000</p><p class="t1">Tier1 (2 horas)</p></div>
-                    <div class="table-line t2"><p class="lv t2">12</p><p class="pts t2">10200</p><p class="t2">Tier2 (2 horas)</p></div>
-                    <div class="table-line"><p class="lv t1">13</p><p class="pts t1">11000</p><p class="t1">Tier1 (2 horas)</p></div>
-                    <div class="table-line"><p class="lv t1">14</p><p class="pts t1">11800</p><p class="t1">Tier1 (2 horas)</p></div>
-                    <div class="table-line"><p class="lv t1">15</p><p class="pts t1">12600</p><p class="t1">Tier1 (2 horas)</p></div>
-                    <div class="table-line t2"><p class="lv t2">16</p><p class="pts t2">13800</p><p class="t2">Tier2 (2 horas)</p></div>
-                    <div class="table-line"><p class="lv t1">17</p><p class="pts t1">14700</p><p class="t1">Tier1 (3 horas)</p></div>
-                    <div class="table-line"><p class="lv t1">18</p><p class="pts t1">15600</p><p class="t1">Tier1 (3 horas)</p></div>
-                    <div class="table-line"><p class="lv t1">19</p><p class="pts t1">16500</p><p class="t1">Tier1 (3 horas)</p></div>
-                    <div class="table-line t2"><p class="lv t2">20</p><p class="pts t2">18000</p><p class="t2">Tier2 (3 horas)</p></div>
+                    <div class="table-line"><p class="lv t1">Etapa</p><p class="pts t1">Passos</p><p class="t1">Tipo de Etapa </p></div>
+                    <div class="table-line"><p class="lv t1">01</p><p class="pts t1">00500</p><p class="t1">Regular (1&nbsp;hora) </p></div>
+                    <div class="table-line"><p class="lv t1">02</p><p class="pts t1">01100</p><p class="t1">Regular (1&nbsp;hora) </p></div>
+                    <div class="table-line"><p class="lv t1">03</p><p class="pts t1">01800</p><p class="t1">Regular (1&nbsp;hora) </p></div>
+                    <div class="table-line t2"><p class="lv t2">04</p><p class="pts t2">03000</p><p class="t2">Especial (1&nbsp;hora) </p></div>
+                    <div class="table-line"><p class="lv t1">05</p><p class="pts t1">03700</p><p class="t1">Regular (1&nbsp;hora) </p></div>
+                    <div class="table-line"><p class="lv t1">06</p><p class="pts t1">04500</p><p class="t1">Regular (1&nbsp;hora) </p></div>
+                    <div class="table-line"><p class="lv t1">07</p><p class="pts t1">05400</p><p class="t1">Regular (1&nbsp;hora) </p></div>
+                    <div class="table-line t2"><p class="lv t2">08</p><p class="pts t2">06600</p><p class="t2">Especial (1&nbsp;hora) </p></div>
+                    <div class="table-line"><p class="lv t1">09</p><p class="pts t1">07400</p><p class="t1">Regular (2&nbsp;horas)</p></div>
+                    <div class="table-line"><p class="lv t1">10</p><p class="pts t1">08200</p><p class="t1">Regular (2&nbsp;horas)</p></div>
+                    <div class="table-line"><p class="lv t1">11</p><p class="pts t1">09000</p><p class="t1">Regular (2&nbsp;horas)</p></div>
+                    <div class="table-line t2"><p class="lv t2">12</p><p class="pts t2">10200</p><p class="t2">Especial (2&nbsp;horas)</p></div>
+                    <div class="table-line"><p class="lv t1">13</p><p class="pts t1">11000</p><p class="t1">Regular (2&nbsp;horas)</p></div>
+                    <div class="table-line"><p class="lv t1">14</p><p class="pts t1">11800</p><p class="t1">Regular (2&nbsp;horas)</p></div>
+                    <div class="table-line"><p class="lv t1">15</p><p class="pts t1">12600</p><p class="t1">Regular (2&nbsp;horas)</p></div>
+                    <div class="table-line t2"><p class="lv t2">16</p><p class="pts t2">13800</p><p class="t2">Especial (2&nbsp;horas)</p></div>
+                    <div class="table-line"><p class="lv t1">17</p><p class="pts t1">14700</p><p class="t1">Regular (3&nbsp;horas)</p></div>
+                    <div class="table-line"><p class="lv t1">18</p><p class="pts t1">15600</p><p class="t1">Regular (3&nbsp;horas)</p></div>
+                    <div class="table-line"><p class="lv t1">19</p><p class="pts t1">16500</p><p class="t1">Regular (3&nbsp;horas)</p></div>
+                    <div class="table-line t2"><p class="lv t2">20</p><p class="pts t2">18000</p><p class="t2">Especial (3&nbsp;horas)</p></div>
                 </div>
             </div>
 
@@ -561,7 +634,7 @@
 
             <div id="ranking-bonus" class="extra-info-element">
                 <h2>BÔNUS ESPECIAL</h2>
-                    <div type="" class="bonus-card" id="don">
+                    <div type=" " class="bonus-card" id="don">
                         <h4><strong>Top 3 Viajantes</strong> do evento ganharão estes bônus no final:</h4>
                         <ul>
                         <li>Escolher qualquer jogo da biblioteca do Lukan, mod, jogo emulado, etc para live (Alguns jogos não podem ser transmitidos por questões técnicas). </li>
@@ -615,7 +688,7 @@
 
 </main>
 <footer>
-    <p>Site criado por Lukan Peixe - Todos os Direitos Reservados - 2026</p>
+    <p>Site criado por Lukan Peixe - Versão 2.0 - Todos os Direitos Reservados - 2026</p>
     <p>Curiosidade: Este site tem apenas uma linha de JavaScript, que é responsável por importar ícones.</p>
 
 </footer>
